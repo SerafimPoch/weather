@@ -29,7 +29,7 @@ const options   = { weekday: 'long', day: 'numeric' }
 button.addEventListener('click',()=>{
     let city = input.value
         const updateByCity = (x) => {
-            let url = "http://api.openweathermap.org/data/2.5/forecast?" +
+            let url = "https://api.openweathermap.org/data/2.5/forecast?" +
 	            "q=" + x +
                 "&APPID=" + key
                 sendRequest(url)
@@ -131,7 +131,7 @@ const showPosition = (position) => {
 }
  
 const updateByGeo = (lat, lon) => {
-    let url = 'http://api.openweathermap.org/data/2.5/forecast?'
+    let url = 'https://api.openweathermap.org/data/2.5/forecast?'
     +
 	"lat=" + lat +
 	"&lon=" + lon +
