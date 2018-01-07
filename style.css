@@ -14,12 +14,6 @@
     width:       150px;
 }
 
-/* #temperature_1 {
-    font-size:   70px;
-    font-weight: bold;
-    width:       150px;
-} */
-
 .location {
     font-size: 30px;
     width:     100%;
@@ -86,4 +80,8 @@
     font-size:  25px;
     min-width:  50px;
     min-height: 50px;
+}
+
+.add-city {
+    margin: 5px auto;
 }

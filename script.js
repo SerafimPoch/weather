@@ -2,7 +2,9 @@ const key       = 'e2a4d8b55c5d115b04b00a5b2b95c1c9'
 const button    = document.querySelector('.submit')
 const buttonC   = document.querySelector('.celc')
 const buttonF   = document.querySelector('.faren')
-let   input     = document.querySelector('.input')
+const buttonAdd = document.querySelector('.add')
+let list        = document.querySelector('.list-group')
+let input       = document.querySelector('.input')
 
 const temp_1      = document.getElementById('temperature_1')
 const temp_3      = document.getElementById('temperature_3')
@@ -25,7 +27,7 @@ const icon_5      = document.getElementById('icon_5')
 
 const humidity_1  = document.getElementById('humidity_1')
 const options   = { weekday: 'long', day: 'numeric' }
-  
+
 button.addEventListener('click',()=>{
     let city = input.value
         const updateByCity = (x) => {
@@ -36,6 +38,13 @@ button.addEventListener('click',()=>{
         }
         input.value = ''
     updateByCity(city)
+})
+
+buttonAdd.addEventListener('click', ()=>{
+   let cityAdd = input.value
+        list.insertAdjacentHTML('beforeend',
+        '<li class="list-group-item">'+ cityAdd +'</li> ')
+     input.value = ''
 })
 
 const Faren = (c) => Math.round(c * (9/5) - 459.67)
